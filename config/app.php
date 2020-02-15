@@ -181,7 +181,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         // Laracasts\Flash\FlashServiceProvider::class,
         Mews\Captcha\CaptchaServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        // Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],
 
