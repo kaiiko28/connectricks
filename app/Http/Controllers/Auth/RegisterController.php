@@ -10,7 +10,6 @@ use App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 // use App\Http\Requests\RegisterRequest;
 use App\orders;
-use App\TableOfExit;
 use App\wallet;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -68,8 +67,6 @@ class RegisterController extends Controller
         $connection_user_code = $request->input('connection_id');
         $table_id = $upline_connection = "";
 
-        // $upline = User::where('code', $connection_user_code)->first();
-        $connection = TableOfExit::where('user_code', $connection_user_code)->first();
 
 
 
@@ -128,7 +125,7 @@ class RegisterController extends Controller
 
 
 
-                if($code->prices >= 480) {
+                if($code->prices >= 125) {
                     $order = new orders;
                         $order->username = $user->username;
                         $order->acc_name =  $user->firstname . ' ' . $user->lastname;
@@ -139,30 +136,6 @@ class RegisterController extends Controller
                     $order->save();
                 }
 
-                if($connection == null || $connection->current_table != "Table 1") {
-                    $table_id = null;
-                    $upline_connection = null;
-                    $joined_at = null;
-                }
-                else {
-                    $table_id = $connection->current_table_id;
-                    $upline_connection = $connection->connection_id;
-                    $joined_at = date('Y-m-d H:i:s',strtotime("+8 hours"));
-                }
-
-                $table = new TableOfExit;
-
-                    $table->userid = $user->id;
-                    $table->username = $user->username;
-                    $table->email = $user->email;
-                    $table->user_code = $user->code;
-                    $table->connection_id = $upline_connection;
-                    $table->current_table_id = $table_id;
-                    $table->current_table = 'Table 1';
-                    $table->table_batch = 'batch b';
-                    $table->current_table_earning = 0;
-                    $table->joined_table_at = $joined_at;
-                $table->save();
 
 
                 $UserCaptcha->save();

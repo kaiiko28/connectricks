@@ -11,7 +11,6 @@ use App\Requestpayout;
 use DB;
 use App\Accode;
 use App\RenewalCode;
-use App\TableOfExit;
 use App\UserCaptcha;
 use App\wallet;
 

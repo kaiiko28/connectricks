@@ -254,7 +254,7 @@
                                     <tr>
                                         <td>{{$myref->name}}</td>
                                         <td>{{$myref->MyRef_code}}</td>
-                                        <td>40.00</td>
+                                        <td>30.00</td>
                                         <td class="center">level 1 (Direct)</td>
                                     </tr>
 

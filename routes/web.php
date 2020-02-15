@@ -35,13 +35,13 @@ Route::prefix('/user')->group(function() {
 
     // Route::resource('/solving', 'UserCaptchaController');
 
-    Route::get('/solving', 'UserCaptchaController@index')->name('user.solve');
+    Route::get('/captcha', 'UserCaptchaController@index')->name('user.solve');
     Route::post('/validate', 'UserCaptchaController@update')->name('user.validate');
     Route::get('/myrenewal', 'DashboardController@myrenewal')->name('user.renewal');
     Route::post('/renewal_validation', 'UserCaptchaController@renewal_validation')->name('user.renewal_validation');
 
-    Route::get('/table_of_exits', 'TableOfExitController@index')->name('user.tables');
-    Route::post('/table_of_exits', 'TableOfExitController@update_table')->name('update_table');
+    // Route::get('/table_of_exits', 'TableOfExitController@index')->name('user.tables');
+    // Route::post('/table_of_exits', 'TableOfExitController@update_table')->name('update_table');
     Route::get('/getRequest', 'TableOfExitController@getRequest')->name('user.getRequest');
 
 

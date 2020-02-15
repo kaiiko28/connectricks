@@ -136,7 +136,7 @@
                                                                 $source = "";
 
                                                             @endphp
-                                                            @if(request()->get('source') == "Captcha Earnings" || request()->get('source') == "Table of Exit Earnings")
+                                                            @if(request()->get('source') == "Captcha Earnings")
                                                                 <td style="vertical-align: middle;">
                                                                     <strong>Request Amount:</strong>
                                                                 </td>
@@ -145,31 +145,7 @@
                                                                 </td>
 
 
-                                                            @elseif (request()->get('source') == "Captcha and Table of Exit Earnings")
-                                                                <td  colspan="2" style="vertical-align: middle;">
-                                                                    <table style="border: none;">
-                                                                        <tr>
-                                                                            <td style="border: none;background:none">
-                                                                                <strong>Captcha Eanings:</strong>
-                                                                            </td>
-                                                                            <td style='border: none;background:none'>
-                                                                                <input type='number' class='form-control' id='captcha' name="captcha" min='1' max='{{$UserCaptcha->Earnings }}' value='0' required> of {{$UserCaptcha->Earnings}}
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                                <strong>Table of Exit Eanings:</strong>
-                                                                            </td>
-                                                                            <td>
-                                                                                <input type='number' class='form-control' id='table' name="table" min='500' max='{{$table->current_table_earning}}' value='0' required> of {{$table->current_table_earning}}
-                                                                            </td>
-                                                                        </tr>
-
-                                                                        <tr>
-                                                                            <td  colspan="2" style="vertical-align: middle;"><input id="confirm" type="button" class="btn btn-success" value="Confirm Value"></td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
+                                                            
 
                                                             @else
                                                                 <td style="vertical-align: middle;">
@@ -255,7 +231,7 @@
                                                 <!-- Collapse buttons -->
                                                     <div style="margin-bottom:50px;">
                                                         <div class="row">
-                                                            <div class="col-sm-6">
+                                                            {{-- <div class="col-sm-6">
                                                                 <a class="btn btn-primary" style="width:100%;margin: 0;" data-toggle="collapse" href="#bank" aria-expanded="false" aria-controls="bank">
                                                                     BANKS
                                                                 </a>
@@ -337,9 +313,9 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            </div> --}}
 
-                                                            <div class="col-sm-6">
+                                                            <div class="col-sm-12">
                                                                     <a class="btn btn-primary" style="width:100%;margin: 0;" data-toggle="collapse" href="#remitance" aria-expanded="false" aria-controls="remitance">
                                                                             E-Wallet and Remitance Center
                                                                     </a>
@@ -347,7 +323,7 @@
                                                                         <div class="mt-3">
                                                                             <div class="form-group form-material">
                                                                                 <table class="table table-striped table-bordered text-center" style="table-layout:fixed">
-                                                                                    <tr>
+                                                                                    {{-- <tr>
                                                                                         <td>
                                                                                             <label class="radio-material">
                                                                                                 <input id="PALAWAN" type="radio" value="PALAWAN" name="mode" required>
@@ -366,16 +342,16 @@
                                                                                                 <h5 class="text-center">MLUILLER</h5>
                                                                                             </label>
                                                                                         </td>
-                                                                                    </tr>
+                                                                                    </tr> --}}
                                                                                     <tr>
-                                                                                        <td>
+                                                                                        {{-- <td>
                                                                                             <label class="radio-material">
                                                                                                 <input id="COINS.PH" type="radio" value="COINS.PH" name="mode" required>
                                                                                                 <span class="outer"><span class="inner"></span></span>
                                                                                                 <img class="img-responsive" src="{{ asset('img/mop/coinph.png') }}" height="50px"/>
                                                                                                 <h5 class="text-center">COINS.PH</h5>
                                                                                             </label>
-                                                                                        </td>
+                                                                                        </td> --}}
                                                                                         <td>
                                                                                             <label class="radio-material">
                                                                                                 <input id="GCASH" type="radio" value="GCASH" name="mode" required>
@@ -387,7 +363,7 @@
                                                                                         </td>
                                                                                     </tr>
 
-                                                                                    <tr>
+                                                                                    {{-- <tr>
 
                                                                                         <td>
                                                                                             <label class="radio-material">
@@ -408,7 +384,7 @@
 
 
                                                                                         </td>
-                                                                                    </tr>
+                                                                                    </tr> --}}
                                                                                 </table>
                                                                             </div>
                                                                         </div>
