@@ -391,45 +391,45 @@
 </footer>
 <!--Footer ends-->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="http://themesindustry.com/html/trax-2020/js/jquery-3.4.1.min.js"></script>
+<script src="{{asset('/')}}jquery/jquery-3.4.1.min.js"></script>
 <!--Bootstrap Core-->
-<script src="http://themesindustry.com/html/trax-2020/js/propper.min.js"></script>
-<script src="http://themesindustry.com/html/trax-2020/js/bootstrap.min.js"></script>
+<script src="{{asset('/')}}js/propper.min.js"></script>
+<script src="{{asset('/')}}js/bootstrap.min.js"></script>
 <!--to view items on reach-->
-<script src="http://themesindustry.com/html/trax-2020/js/jquery.appear.js"></script>
+<script src="{{asset('/')}}js/jquery.appear.js"></script>
 <!--Owl Slider-->
-<script src="http://themesindustry.com/html/trax-2020/js/owl.carousel.min.js"></script>
+<script src="{{asset('/')}}js/owl.carousel.min.js"></script>
 <!--number counters-->
-<script src="http://themesindustry.com/html/trax-2020/js/jquery-countTo.js"></script>
+<script src="{{asset('/')}}js/jquery-countTo.js"></script>
 <!--Parallax Background-->
-<script src="http://themesindustry.com/html/trax-2020/js/parallaxie.js"></script>
+<script src="{{asset('/')}}js/parallaxie.js"></script>
 <!--Cubefolio Gallery-->
-<script src="http://themesindustry.com/html/trax-2020/js/jquery.cubeportfolio.min.js"></script>
+<script src="{{asset('/')}}js/jquery.cubeportfolio.min.js"></script>
 <!--Fancybox js-->
-<script src="http://themesindustry.com/html/trax-2020/js/jquery.fancybox.min.js"></script>
+<script src="{{asset('/')}}js/jquery.fancybox.min.js"></script>
 <!--Tooltip js-->
-<script src="http://themesindustry.com/html/trax-2020/js/tooltipster.min.js"></script>
+<script src="{{asset('/')}}js/tooltipster.min.js"></script>
 <!--wow js-->
-<script src="http://themesindustry.com/html/trax-2020/js/wow.js"></script>
+<script src="{{asset('/')}}js/wow.js"></script>
 <!--Revolution SLider-->
-<script src="http://themesindustry.com/html/trax-2020/js/revolution/jquery.themepunch.tools.min.js"></script>
-<script src="http://themesindustry.com/html/trax-2020/js/revolution/jquery.themepunch.revolution.min.js"></script>
+<script src="{{asset('/')}}js/jquery.themepunch.tools.min.js"></script>
+<script src="{{asset('/')}}js/jquery.themepunch.revolution.min.js"></script>
 <!-- SLIDER REVOLUTION 5.0 EXTENSIONS -->
-<script src="http://themesindustry.com/html/trax-2020/js/revolution/extensions/revolution.extension.actions.min.js"></script>
-<script src="http://themesindustry.com/html/trax-2020/js/revolution/extensions/revolution.extension.carousel.min.js"></script>
-<script src="http://themesindustry.com/html/trax-2020/js/revolution/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="http://themesindustry.com/html/trax-2020/js/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="http://themesindustry.com/html/trax-2020/js/revolution/extensions/revolution.extension.migration.min.js"></script>
-<script src="http://themesindustry.com/html/trax-2020/js/revolution/extensions/revolution.extension.navigation.min.js"></script>
-<script src="http://themesindustry.com/html/trax-2020/js/revolution/extensions/revolution.extension.parallax.min.js"></script>
-<script src="http://themesindustry.com/html/trax-2020/js/revolution/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="http://themesindustry.com/html/trax-2020/js/revolution/extensions/revolution.extension.video.min.js"></script>
+<script src="{{asset('/')}}js/revolution.extension.actions.min.js"></script>
+<script src="{{asset('/')}}js/revolution.extension.carousel.min.js"></script>
+<script src="{{asset('/')}}js/revolution.extension.kenburn.min.js"></script>
+<script src="{{asset('/')}}js/revolution.extension.layeranimation.min.js"></script>
+<script src="{{asset('/')}}js/revolution.extension.migration.min.js"></script>
+<script src="{{asset('/')}}js/revolution.extension.navigation.min.js"></script>
+<script src="{{asset('/')}}js/revolution.extension.parallax.min.js"></script>
+<script src="{{asset('/')}}js/revolution.extension.slideanims.min.js"></script>
+<script src="{{asset('/')}}js/revolution.extension.video.min.js"></script>
 <!--map js-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw"></script>
-<script src="http://themesindustry.com/html/trax-2020/js/map.js"></script>
+<script src="{{asset('/')}}js/map.js"></script>
 <!--custom functions and script-->
-<script src="http://themesindustry.com/html/trax-2020/js/functions.js"></script>
+<script src="{{asset('/')}}js/functions.js"></script>
 </body>
 
-<!-- Mirrored from themesindustry.com/html/trax-2020/single-index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Jan 2020 14:58:57 GMT -->
+
 </html>
