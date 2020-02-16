@@ -11,7 +11,7 @@ class TopAccountSeeder extends Seeder
      */
     public function run()
     {
-        $activation_code = 'EG-' . str_random(4) . '-' . date("G")  . str_random(2);
+        $activation_code = 'CT-' . str_random(2) . '-' . date("G")  . str_random(2);
         DB::table('users')->insert([
             'username' => 'connectricks_master',
             'firstname' => 'Connectricks',
