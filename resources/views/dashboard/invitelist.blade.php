@@ -90,7 +90,6 @@
                                     <td>{{$myref->name}}</td>
                                     <td>{{$myref->MyRef_code}}</td>
                                     <td>30.00</td>
-
                                     <td class="center">level 1 (Direct)</td>
                                 </tr>
 
@@ -107,7 +106,6 @@
                                                 <td>{{$lvl1->name}}</td>
                                                 <td>{{$lvl1->MyRef_code}}</td>
                                                 <td>10.00</td>
-
                                                 <td class="center">level 2</td>
                                             </tr>
 
@@ -125,32 +123,26 @@
                                                         <td>{{$lvl2->name}}</td>
                                                         <td>{{$lvl2->MyRef_code}}</td>
                                                         <td>5.00</td>
-
                                                         <td class="center">level 3</td>
                                                     </tr>
 
-                                                    @php
-                                                        $lvl3 = DB::table('referals')->where('Referer_code', $lvl2->MyRef_code)->get();
-        
-                                                    @endphp
-        
-        
-                                                    @if (count($lvl3) > 0)
-                                                        @foreach ($lvl3 as $lvl3)
-        
-        
-                                                            <tr>
-                                                                <td>{{$lvl3->name}}</td>
-                                                                <td>{{$lvl3->MyRef_code}}</td>
-                                                                <td>5.00</td>
-        
-                                                                <td class="center">level 4</td>
-                                                            </tr>
-        
-        
-                                                        @endforeach
-                                                    @endif
 
+                                                @php
+                                                    $lvl3 = DB::table('referals')->where('Referer_code', $lvl2->MyRef_code)->get();
+
+                                                @endphp
+
+
+                                                @foreach ($lvl3 as $lvl3)
+
+
+                                                    <tr>
+                                                        <td>{{$lvl3->name}}</td>
+                                                        <td>{{$lvl3->MyRef_code}}</td>
+                                                        <td>5.00</td>
+                                                        <td class="center">level 4</td>
+                                                    </tr>
+                                                @endforeach
                                                 @endforeach
                                             @endif
 

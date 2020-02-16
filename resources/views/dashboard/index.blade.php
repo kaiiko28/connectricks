@@ -2,25 +2,14 @@
 
 @section('styles')
 
+<link rel="stylesheet" href="{{asset('dashboard/')}}/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="{{asset('dashboard/')}}/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
 <style>
-    .btn-primary {
-        background-color: yellow;
-        border-color: yellow;
-        color: #000;
-    }
-
-    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-        background-color: #e7c50f;
-        border-color: #e7c50f;
-    }
-    .dataTables_paginate .paginate_button.current, .dataTables_paginate .paginate_button.current:hover {
-        background: #014802;
-        color: #FFF;
-        border-color: #014802;
-    }
-    .tile.tile-valign {
-        line-height: 2em;
-    }
+    div.dataTables_wrapper div.dataTables_length label {
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+}
 </style>
 
 @endsection
@@ -29,23 +18,7 @@
     <h1 style="width:100%">Dashboard 
 
 
-        <form method="POST" action="{{ route('request1') }}">
-            {{ csrf_field() }}
-
-            <input class="hidden" style="display:none;" id="user_id" name="user_id" value="{{ Auth::user()->id }}" />
-            <input class="hidden" style="display:none;" id="user_code" name="user_code" value="{{ Auth::user()->code }}" />
-            <input class="hidden" style="display:none;" id="username" name="username" value="{{ Auth::user()->username }}" />
-            
-            <input class="hidden" id="encashments" style="display:none;" name="encashments" value="" />
-            <input class="hidden" id="source" style="display:none;" name="source" value="" />
-
-
-                <button id="redeem_reward" type="submit" class="btn btn-success redeem_reward disable-btn">CLAIM </button>
-                
-
-
-
-        </form>
+        
     </h1>
 
 @endsection
@@ -72,44 +45,82 @@
 @endphp
 
 <div class="row">
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
             <div class="card-icon bg-primary">
                 <i class="fas fa-puzzle-piece"></i>
             </div>
             <div class="card-wrap">
                 <div class="card-header">
-                    <h4>Solve Earnings</h4>
+                    <form method="POST" action="{{ route('request1') }}">
+                        {{ csrf_field() }}
+                        
+                        
+                        <input class="hidden" style="display:none;" id="user_id" name="user_id" value="{{ Auth::user()->id }}" />
+                        <input class="hidden" style="display:none;" id="user_code" name="user_code" value="{{ Auth::user()->code }}" />
+                        <input class="hidden" style="display:none;" id="username" name="username" value="{{ Auth::user()->username }}" />
+                        
+                        <input class="hidden" id="encashments" style="display:none;" name="encashments" value="{{$UserCaptcha->Earnings}}" />
+                        <input class="hidden" id="source" style="display:none;" name="source" value="captcha earnings" />
+                        
+                        <h4>Solve
+                            <button id="redeem_reward" type="submit" class="btn btn-success redeem_reward disable-btn">CLAIM </button>
+                                
+                        </h4>
+            
+            
+                    </form>
                 </div>
                 <div class="card-body">
                     {{ $captcha = number_format($UserCaptcha->Earnings, 2) }}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-            <div class="card-icon bg-primary">
-                <i class="fas fa-comments-dollar"></i>
-            </div>
-            <div class="card-wrap">
-                <div class="card-header">
-                    <h4>My invite</h4>
-                </div>
-                <div class="card-body">
-                    <span id="invite_earnings"></span>
+                    
                 </div>
             </div>
         </div>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
+            <div class="card-icon bg-primary">
+                <i class="fas fa-comments-dollar"></i>
+            </div>
+            <div class="card-wrap">
+                <div class="card-header">
+                    
+                    
+
+                    <form method="POST" action="{{ route('request1') }}">
+                        {{ csrf_field() }}
+                        <input class="hidden" style="display:none;" id="deposit_amount" name="encashments" value="" />
+                        <input class="hidden" style="display:none;" id="user_id" name="user_id" value="{{ Auth::user()->id }}" />
+                        <input class="hidden" style="display:none;" id="user_code" name="user_code" value="{{ Auth::user()->code }}" />
+                        <input class="hidden" style="display:none;" id="user" name="user" value="{{ Auth::user()->username }}" />
+                        <input class="hidden" style="display:none;" id="source" name="source" value="Invite" />
+
+                        
+                        <h4>My invite
+                        <button type="submit" id="invite_button" class="disable-btn invite_cost mb-1 mt-1 mr-1 btn btn-info btn-md incashment_wallet">
+
+                            CLAIM<strong class="hidden" style="display:none;"><span id="invite_earnings1"></span></strong>
+                        </button>
+                        
+                    </h4>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <span id="invite_earnings"></span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="card card-statistic-1">
             <button class="card-icon bg-primary" onclick="myFunction()" onclick="outFunc()">
                 <i class="fas fa-copy"></i>
             </button>
             <div class="card-wrap">
                 <div class="card-header">
-                    <h4>My invite</h4>
+                    <h4>My Link</h4>
                 </div>
                 <div class="card-body"  style="overflow:auto;padding:0 15px 0 0px;">
                     <input type="text" class="reflink crop"  style="padding:0;background:transparent;border:none;width:100%!important;" value="{{ route('register') . '?refcode=' . Auth::user()->code }}" id="link" readonly>
@@ -118,6 +129,7 @@
         </div>
     </div>
 </div>
+
 {{-- <div class="card-body">
     <div class="col-md-12">
         <div class="card text-center bg-success">
@@ -201,130 +213,112 @@
     </div>
 </div> --}}
 
-<div class="row" style="display:none!important;">
 
+<div class="card" >
+    
+    <div class="card-header">
+        <h4>Joiners Reward</h4>
+        <div id="wallet" class="col-sm-4 text-center">
+
+        </div>
+    </div>
     {{-- <div class="row"> --}}
 
 
-    <div class="col-sm-9">
-        <div class="panel panel-default">
-            <div class="panel-title">
-                <div class="col-sm-8">
-                        Invites
-                </div>
-                <div id="wallet" class="col-sm-4 text-center">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table id="invite_list" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>User Code</th>
+                        <th>Rewards</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
 
-                    <form method="POST" action="{{ route('wallet') }}">
-                        {{ csrf_field() }}
-                        <input class="hidden" style="display:none;" id="deposit_amount" name="deposit_amount" value="" />
-                        <input class="hidden" style="display:none;" id="user_id" name="user_id" value="{{ Auth::user()->id }}" />
-                        <input class="hidden" style="display:none;" id="email" name="email" value="{{ Auth::user()->email }}" />
-                        <input class="hidden" style="display:none;" id="user" name="user" value="{{ Auth::user()->username }}" />
+                <tbody>
 
+                    @php
+                        $myrefdirect = DB::table('referals')->where('Referer_code', auth()->user()->code)->get();
+                        $myref_code = DB::table('referals')->where('Referer_code', auth()->user()->code)->pluck('MyRef_code');
+                    @endphp
 
-                        <button type="submit" id="invite_button" class="disable-btn invite_cost mb-1 mt-1 mr-1 btn btn-success btn-md">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                            Deposit <strong class="amount"><span id="invite_earnings1"></span></strong> to Wallet
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div class="panel-body">
-                <div class="table-responsive">
-                    <table id="invite_list" class="table datatable table-bordered">
-                        <thead>
+                    @if (count($myrefdirect)>0)
+                        @foreach($myrefdirect as $myref)
+                            @if ($myref->MyRef_code != auth()->user()->code)
                             <tr>
-                                <th>Name</th>
-                                <th>User Code</th>
-                                <th>Rewards</th>
-                                <th>Level</th>
+                                <td>{{$myref->name}}</td>
+                                <td>{{$myref->MyRef_code}}</td>
+                                <td>30.00</td>
+                                <td class="center">level 1 (Direct)</td>
                             </tr>
-                        </thead>
 
-                        <tbody>
 
-                            @php
-                                $myrefdirect = DB::table('referals')->where('Referer_code', auth()->user()->code)->get();
-                                $myref_code = DB::table('referals')->where('Referer_code', auth()->user()->code)->pluck('MyRef_code');
-                            @endphp
+                                @php
+                                    $lvl1 = DB::table('referals')->where('Referer_code', $myref->MyRef_code)->get();
+                                    $lvl1_code = DB::table('referals')->where('Referer_code', $myref_code)->pluck('MyRef_code');
+                                @endphp
 
-                            @if (count($myrefdirect)>0)
-                                @foreach($myrefdirect as $myref)
-                                    @if ($myref->MyRef_code != auth()->user()->code)
-                                    <tr>
-                                        <td>{{$myref->name}}</td>
-                                        <td>{{$myref->MyRef_code}}</td>
-                                        <td>30.00</td>
-                                        <td class="center">level 1 (Direct)</td>
-                                    </tr>
+                                @if (count($lvl1) > 0)
+                                    @foreach ($lvl1 as $lvl1)
 
+                                        <tr>
+                                            <td>{{$lvl1->name}}</td>
+                                            <td>{{$lvl1->MyRef_code}}</td>
+                                            <td>10.00</td>
+                                            <td class="center">level 2</td>
+                                        </tr>
 
                                         @php
-                                            $lvl1 = DB::table('referals')->where('Referer_code', $myref->MyRef_code)->get();
-                                            $lvl1_code = DB::table('referals')->where('Referer_code', $myref_code)->pluck('MyRef_code');
+                                            $lvl2 = DB::table('referals')->where('Referer_code', $lvl1->MyRef_code)->get();
+
                                         @endphp
 
-                                        @if (count($lvl1) > 0)
-                                            @foreach ($lvl1 as $lvl1)
+
+                                        @if (count($lvl2) > 0)
+                                            @foreach ($lvl2 as $lvl2)
+
 
                                                 <tr>
-                                                    <td>{{$lvl1->name}}</td>
-                                                    <td>{{$lvl1->MyRef_code}}</td>
-                                                    <td>10.00</td>
-                                                    <td class="center">level 2</td>
+                                                    <td>{{$lvl2->name}}</td>
+                                                    <td>{{$lvl2->MyRef_code}}</td>
+                                                    <td>5.00</td>
+                                                    <td class="center">level 3</td>
                                                 </tr>
 
-                                                @php
-                                                    $lvl2 = DB::table('referals')->where('Referer_code', $lvl1->MyRef_code)->get();
 
-                                                @endphp
+                                            @php
+                                                $lvl3 = DB::table('referals')->where('Referer_code', $lvl2->MyRef_code)->get();
 
-
-                                                @if (count($lvl2) > 0)
-                                                    @foreach ($lvl2 as $lvl2)
+                                            @endphp
 
 
-                                                        <tr>
-                                                            <td>{{$lvl2->name}}</td>
-                                                            <td>{{$lvl2->MyRef_code}}</td>
-                                                            <td>5.00</td>
-                                                            <td class="center">level 3</td>
-                                                        </tr>
+                                            @foreach ($lvl3 as $lvl3)
 
 
-                                                    @php
-                                                        $lvl3 = DB::table('referals')->where('Referer_code', $lvl2->MyRef_code)->get();
-
-                                                    @endphp
-
-
-                                                    @foreach ($lvl3 as $lvl3)
-
-
-                                                        <tr>
-                                                            <td>{{$lvl3->name}}</td>
-                                                            <td>{{$lvl3->MyRef_code}}</td>
-                                                            <td>5.00</td>
-                                                            <td class="center">level 4</td>
-                                                        </tr>
-                                                    @endforeach
-                                                    @endforeach
-                                                @endif
-
+                                                <tr>
+                                                    <td>{{$lvl3->name}}</td>
+                                                    <td>{{$lvl3->MyRef_code}}</td>
+                                                    <td>5.00</td>
+                                                    <td class="center">level 4</td>
+                                                </tr>
+                                            @endforeach
                                             @endforeach
                                         @endif
 
-                                    @endif
-
-
-
-
-                                @endforeach
+                                    @endforeach
                                 @endif
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+
+                            @endif
+
+
+
+
+                        @endforeach
+                    @endif
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
@@ -334,6 +328,17 @@
 
 @section('scripts')
 
+    <script src="{{ asset('/')}}dashboard/modules/datatables/datatables.min.js"></script>
+    <script src="{{ asset('/')}}dashboard/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="{{ asset('/')}}dashboard/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
+    <script src="{{ asset('/')}}dashboard/modules/jquery-ui/jquery-ui.min.js"></script>
+    <script src="{{ asset('/')}}dashboard/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready( function () {
+            $('#invite_list').DataTable();
+        } );
+    </script>
+    
     <script>
         function formatNumber(num) {
             return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
@@ -359,7 +364,7 @@
             document.getElementById('deposit_amount').value = total;
 
 
-            if( total < 0) {
+            if( total < 100) {
 
                 $('.incashment_wallet').prop('disabled',true);
 
@@ -369,6 +374,12 @@
 
             var gross = formatNumber({{$UserCaptcha->Earnings}} + total)  ;
             // var all = sumVal;
+
+            if( {{$UserCaptcha->Earnings}} < 300) {
+
+                    $('.redeem_reward').prop('disabled',true);
+
+            }
 
             document.getElementById("total_gross").innerHTML = gross;
 

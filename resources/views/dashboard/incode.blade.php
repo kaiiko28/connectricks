@@ -80,12 +80,12 @@
 
                                                 <div class="overlay correct d-none bg-primary text-center">
                                                     <img src="{{ asset('/') }}img/correct.gif" alt="">
-                                                    <p>CORRECT</p>
+                                                    {{-- <p>CORRECT</p> --}}
                                                 </div>
 
                                                 <div class="overlay error d-none bg-primary text-center">
-                                                    <img src="{{ asset('/') }}img/wrong.gif" alt="">
-                                                    <p>WRONG</p>
+                                                    <img src="{{ asset('/') }}img/wrong.gif" alt="" style="height:300px;width:auto;">
+                                                    {{-- <h3>WRONG</h3> --}}
                                                 </div>
                                                 
 

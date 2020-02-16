@@ -297,6 +297,9 @@
                 </div>
 
                 <div class="section-body">
+                    
+                    @include('inc.messeges')
+
                     @yield('content')
                 </div>
             </section>
