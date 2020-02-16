@@ -274,7 +274,7 @@
                 <ul class="sidebar-menu">
                     <li><a class="nav-link" href="{{ route('user.dashboard') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a></li>
                     <li><a class="nav-link" href="{{ route('user.solve') }}"><i class="fas fa-pencil-ruler"></i> <span>Solving</span></a></li>
-                    <li><a class="nav-link" href="{{ route('user.invite_list') }}"><i class="fas fa-users"></i> <span>My Invites</span></a></li>
+                    {{-- <li><a class="nav-link" href="{{ route('user.invite_list') }}"><i class="fas fa-users"></i> <span>My Invites</span></a></li> --}}
                     <li><a class="nav-link" href="{{ route('user.payout_logs') }}"><i class="fas fa-users"></i> <span>Payout Logs</span></a></li>
                     @if (Auth::user()->role == "Code Seller" || Auth::user()->role == "Payout Officer")
                         <li><a class="nav-link" href="{{ route('user.code') }}"><i class="fas fa-database"></i> <span>Code Seller Portal</span></a></li>
