@@ -61,11 +61,14 @@ class RequestController extends Controller
         $request = DB::table('requestpayouts')->where('user_id', Auth()->user()->id)->where('status', 'Pending')->get();
 
         $UserCaptcha = UserCaptcha::where('user_id', auth()->user()->id)->first();
-        // $source = $request->input('source');
-        // if ($limit < 200)
-        // {
-        //     return back()->with('error', 'Insuficient balance');
-        // }
+        $source = $request->input('source');
+
+        if($source == 'captcha earnings') {
+            if ($limit < 200)
+            {
+                return back()->with('error', 'Insuficient balance');
+            }
+        }
 
 
         // if (count($request) > 0) {

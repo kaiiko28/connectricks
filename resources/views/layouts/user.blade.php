@@ -99,7 +99,7 @@
             </div> --}}
             </form>
             <ul class="navbar-nav navbar-right">
-            <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
+            {{-- <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
                 <div class="dropdown-menu dropdown-list dropdown-menu-right">
                 <div class="dropdown-header">Messages
                     <div class="float-right">
@@ -220,14 +220,14 @@
                     <a href="#">View All <i class="fas fa-chevron-right"></i></a>
                 </div>
                 </div>
-            </li>
+            </li> --}}
             @guest
-                <li class="">
-                    <a href="{{ route('login') }}" class="nav-link nav-link-lg nav-link-user">
-                        <div class="d-sm-none d-lg-inline-block">Log In</div>
-                    </a>
-                    
-                </li>
+            <li class="">
+                <a href="{{ route('login') }}" class="nav-link nav-link-lg nav-link-user">
+                    <div class="d-sm-none d-lg-inline-block">Log In</div>
+                </a>
+                
+            </li>
             @else
                 <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                     <img alt="image" src="{{ asset('/dashboard')}}/img/avatar/avatar-1.png" class="rounded-circle mr-1">
@@ -275,7 +275,7 @@
                     <li><a class="nav-link" href="{{ route('user.dashboard') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a></li>
                     <li><a class="nav-link" href="{{ route('user.solve') }}"><i class="fas fa-pencil-ruler"></i> <span>Solving</span></a></li>
                     <li><a class="nav-link" href="{{ route('user.invite_list') }}"><i class="fas fa-users"></i> <span>My Invites</span></a></li>
-
+                    <li><a class="nav-link" href="{{ route('user.payout_logs') }}"><i class="fas fa-users"></i> <span>Payout Logs</span></a></li>
                     @if (Auth::user()->role == "Code Seller" || Auth::user()->role == "Payout Officer")
                         <li><a class="nav-link" href="{{ route('user.code') }}"><i class="fas fa-database"></i> <span>Code Seller Portal</span></a></li>
                         
