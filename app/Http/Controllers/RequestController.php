@@ -9,7 +9,6 @@ use App\UserCaptcha;
 use App\User;
 use DB;
 use App\Accode;
-use App\TableOfExit;
 
 class RequestController extends Controller
 {
@@ -61,7 +60,6 @@ class RequestController extends Controller
         $limit = $request->input('encashments');
         $request = DB::table('requestpayouts')->where('user_id', Auth()->user()->id)->where('status', 'Pending')->get();
 
-        $table = TableOfExit::where('userid', auth()->user()->id)->first();
         $UserCaptcha = UserCaptcha::where('user_id', auth()->user()->id)->first();
         // $source = $request->input('source');
         // if ($limit < 200)
@@ -75,7 +73,7 @@ class RequestController extends Controller
         // }
 
 
-        return view ('dashboard.request',compact('acc_status','wallet','table','UserCaptcha'));
+        return view ('dashboard.request',compact('acc_status','wallet','UserCaptcha'));
 
         // return view ('dashboard.request');
     }
@@ -210,21 +208,9 @@ class RequestController extends Controller
             // wallet::where('user_id',  $user_id)->decrement('deposit',$sub_total);
             wallet::where('user_id',  $user_id)->increment('withdrawal',$sub_total);
         }
-        if ($source == "Captcha and Table of Exit Earnings") {
-            $tablereward = $request->input('table');
-            $captchareward = $request->input('captcha');
-            UserCaptcha::where('user_id',  $user_id)->decrement('Earnings',$captchareward);
-            UserCaptcha::where('user_id',  $user_id)->increment('encashments',$captchareward);
-            TableOfExit::where('userid',  $user_id)->decrement('current_table_earning',$tablereward);
-            TableOfExit::where('userid',  $user_id)->increment('claimed_earnings',$tablereward);
-        }
         if ($source == "Captcha Earnings") {
             UserCaptcha::where('user_id',  $user_id)->decrement('Earnings',$sub_total);
             UserCaptcha::where('user_id',  $user_id)->increment('encashments',$sub_total);
-        }
-        if ($source == "Table of Exit Earnings") {
-            TableOfExit::where('userid',  $user_id)->decrement('current_table_earning',$sub_total);
-            TableOfExit::where('userid',  $user_id)->increment('claimed_earnings',$sub_total);
         }
 
 
