@@ -301,19 +301,19 @@
                     </div>
                     <div id="app-slider" class="owl-carousel owl-theme">
                         <div class="item">
-                            <img src="{{asset('img/mobile/2.?v=1')}}" alt="">
+                            <img src="{{asset('img/mobile/2.png?v=1')}}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('img/mobile/3.?v=1')}}" alt="">
+                            <img src="{{asset('img/mobile/3.png?v=1')}}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('img/mobile/4.?v=1')}}" alt="">
+                            <img src="{{asset('img/mobile/4.png?v=1')}}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('img/mobile/5.?v=1')}}" alt="">
+                            <img src="{{asset('img/mobile/5.png?v=1')}}" alt="">
                         </div>
                     </div>
-                    <img src="http://themesindustry.com/html/trax-2020/images/iphone.?v=1" alt="image">
+                    <img src="http://themesindustry.com/html/trax-2020/images/iphone.png?v=1" alt="image">
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
