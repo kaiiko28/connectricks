@@ -297,23 +297,23 @@
                 <div class="app-image top30">
                     <div class="app-slider-lock-btn"></div>
                     <div class="app-slider-lock">
-                        <img src="{{asset('img/mobile/1.PNG?v=2')}}" alt="">
+                        <img src="{{asset('img/mobile/1.png?v=3')}}" alt="">
                     </div>
                     <div id="app-slider" class="owl-carousel owl-theme">
                         <div class="item">
-                            <img src="{{asset('img/mobile/2.PNG?v=2')}}" alt="">
+                            <img src="{{asset('img/mobile/2.png?v=3')}}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('img/mobile/3.PNG?v=2')}}" alt="">
+                            <img src="{{asset('img/mobile/3.png?v=3')}}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('img/mobile/4.PNG?v=2')}}" alt="">
+                            <img src="{{asset('img/mobile/4.png?v=3')}}" alt="">
                         </div>
                         <div class="item">
-                            <img src="{{asset('img/mobile/5.PNG?v=2')}}" alt="">
+                            <img src="{{asset('img/mobile/5.png?v=3')}}" alt="">
                         </div>
                     </div>
-                    <img src="http://themesindustry.com/html/trax-2020/images/iphone.PNG?v=2" alt="image">
+                    <img src="http://themesindustry.com/html/trax-2020/images/iphone.png?v=3" alt="image">
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
