@@ -58,13 +58,13 @@
     </div><!-- end content -->
 
     <div class="content-after boxs">
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-md-12 general-title">
                 <h4>Other Bob Items <span class="hidden-xs"><a href="public-profile.html">View all</a></span></h4>
                 <hr>
             </div><!-- end col -->
-        </div><!-- end row -->
-        <div class="row">
+        </div><!-- end row --> --}}
+        {{-- <div class="row">
             <div class="col-md-4 col-sm-6">
                 <div class="item-box">
                     <div class="item-media entry">
@@ -121,15 +121,15 @@
                     <small><a href="single-item.html"><i class="fa fa-comment-o"></i> 31</a></small>
                 </div><!-- end item-box -->
             </div><!-- end col -->
-        </div><!-- end row -->
+        </div><!-- end row --> --}}
     </div><!-- end content after -->
 </div><!-- end singlewrapper -->
 
 <div id="sidebar" class="col-md-4">
     <div class="boxes boxs">
         <div class="item-price text-center">
-            <p>$21.00</p>
-            <em><a href="#">Regular License</a></em>
+            <p>₱ {{$product->price}}</p>
+            <em>₱ {{$product->discount}}</em>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -138,10 +138,8 @@
                 <i class="fa fa-star"></i>
             </div>
             <hr>
-            <small><a href="#"><i class="fa fa-star-o"></i> Add to Favorites</a> &nbsp;&nbsp; <a href="#"><i class="fa fa-heart-o"></i> Like it</a> </small>
-            <hr>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-            <a href="#" class="btn btn-default">View Demo</a>
+            <a href="{{$product->link}}" class="btn btn-primary">Add to Cart</a>
+            {{-- <a href="#" class="btn btn-default">View Demo</a>
             <ul class="list-inline social">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -149,7 +147,7 @@
                 <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                 <li><a href="#"><i class="fa fa-behance"></i></a></li>
                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-            </ul>
+            </ul> --}}
         </div><!-- end price -->
     </div><!-- end boxes -->
 

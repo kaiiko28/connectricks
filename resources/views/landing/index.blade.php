@@ -505,7 +505,7 @@
                                 <div class="center-box">
                                     <a href="{{$products->cover_image}}" class="opens" data-fancybox="gallery" title="Zoom In"> <i class="fa fa-search-plus"></i></a>
                                     <a href="{{route('shop.single') . '?id=' . $products->id}}" class="opens" title="View Details"> <i class="fas fa-link"></i></a>
-                                    <h4 class="w-100">Sweet Cup</h4>
+                                    <h4 class="w-100">{{$products->name}}</h4>
                                 </div>
                             </div>
                         </div>
