@@ -21,6 +21,7 @@
     <!-- Custom Stylesheet -->
     <link type="text/css" rel="stylesheet" href="{{ asset('/')}}auth/css/style.css">
     <link rel="stylesheet" type="text/css" id="style_sheet" href="{{ asset('/')}}auth/css/skins/default.css">
+    @yield('styles')
 
 </head>
 <body id="top">
@@ -49,15 +50,8 @@
                         <a href="{{ route('login') }}" class="active link-btn">Login</a>
                         <a href="{{ route('register') }}" class="link-btn">Register</a>
                     </div>
-                    <h3>We make spectacular</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
-                    <div class="social-box">
-                        <ul class="social-list clearfix">
-                            <li><a href="#" class="facebook-color"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter-color"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="google-color"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#" class="linkedin-color"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
+                    <h3>ConnecTricks make spectacular idea of making online income</h3>
+                    
                     </div>
                 </div>
             </div>
@@ -66,12 +60,13 @@
 </div>
 <!-- Login 3 end -->
 
+
 <!-- External JS libraries -->
 <script src="{{ asset('/')}}auth/js/jquery-2.2.0.min.js"></script>
 <script src="{{ asset('/')}}auth/js/popper.min.js"></script>
 <script src="{{ asset('/')}}auth/js/bootstrap.min.js"></script>
 <!-- Custom JS Script -->
-
+@yield('scripts')
 </body>
 
 

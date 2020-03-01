@@ -32,9 +32,7 @@
 
 @section('content')
 
-<a href="#">
-    <img src="{{ asset('/') }}img/CT.png" alt="logo" style="width:100%;height:auto;">
-</a>
+<a href="{{route('landing')}}"><img src="{{ asset('/') }}img/CT.png" alt="logo" style="width:100%;height:auto;"></a>
 <h3>Sign into your account</h3>
 
 <form method="POST" action="{{ route('login') }}">

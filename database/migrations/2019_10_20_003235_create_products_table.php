@@ -19,11 +19,12 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->decimal('price');
             $table->decimal('discount')->nullable();
-            $table->string('cover_image');
-            $table->string('preview_image')->nullable();
+            $table->longText('cover_image');
+            $table->longText('preview_image')->nullable();
             $table->longtext('discription')->nullable();
             $table->string('category');
             $table->string('featured');
+            $table->string('link');
             $table->timestamps();
         });
     }

@@ -264,10 +264,10 @@
         <div class="main-sidebar sidebar-style-3">
             <aside id="sidebar-wrapper">
                 <div class="sidebar-brand">
-                    <a href="#">{{ config('app.name', 'Connectricks') }}</a>
+                    <a href="{{ route('landing')}}">{{ config('app.name', 'Connectricks') }}</a>
                 </div>
                 <div class="sidebar-brand sidebar-brand-sm">
-                    <a href="#">CT</a>
+                    <a href="{{ route('landing')}}">CT</a>
                 </div>
 
 

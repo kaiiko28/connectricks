@@ -48,13 +48,17 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        
+
+        // return ;
+
         $this->validate($request,[
             'p_name' => 'required',
             'p_price' => 'required',
-            'p_category' => 'required',
+            'p_link' => 'required',
+            'p_disc' => 'required',
         ]);
 
-        // return $request->input('p_image');
 
         if($request->hasfile('p_image')) {
             $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
@@ -69,6 +73,26 @@ class ProductController extends Controller
             $filenametostore = $request->input('p_image');
         }
 
+        $category = $request->input('p_category');
+        $preview =  $request->input('preview_image');
+        
+        $options['key'] =  $request->input('preview_image');
+        
+        
+        if($category == null && $request->input('p_categorytext') == null){
+            return redirect()->back()->with('error', 'Select or put the product category')->withInput();
+        }
+        else {
+            if($category == !null) {
+                $category = $request->input('p_category');
+            }
+            else {
+                $category = $request->input('p_categorytext');
+            }
+        }
+
+
+        // return  $category;
 
 
         $product = new Products;
@@ -77,10 +101,14 @@ class ProductController extends Controller
         $product->price = $request->input('p_price');
         $product->discount = $request->input('p_discount');
         $product->cover_image = $filenametostore;
-        $product->preview_image = $request->input('preview_image');
+        // foreach(array($options['key']) as $key => $img_preview) {
+        //     $product->preview_image = $img_preview;
+        // }
+        $product->preview_image = json_encode($options['key']);
         $product->discription = $request->input('p_disc');
         $product->featured = $request->input('p_feature');
-        $product->category = $request->input('p_category');
+        $product->category = $category;
+        $product->link = $request->input('p_link');
 
         $product->save();
 

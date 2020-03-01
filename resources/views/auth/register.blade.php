@@ -4,8 +4,11 @@
 @section('styles')
     <script data-ad-client="ca-pub-3914889088866533" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
     <style>
-        /* .form-control {
+
+        /* .input-text {
             display: block;
             width: 100%;
             height: calc(2.19rem + 2px);
@@ -20,7 +23,7 @@
             border-radius: .25rem;
             transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
-        .input-group-text, .form-control {
+        .input-group-text, .input-text {
             color: #000!important;
             font-weight: bolder!important;
             font-size: 16px;
@@ -30,7 +33,7 @@
         .flat-get-in-touch input {
             width: auto;
         }
-        .form-control {
+        .input-text {
             width: 100%!important;
         }
     </style>
@@ -43,16 +46,16 @@
             <div class="row">
 
                 @include('inc.messeges')
-                <div class="col-md-offset-2 col-lg-8">
-                    <div class="title-section">
-                        <h3 class="our-product-title"><a href="#"> Member Registration </a></h3>
-                        {{-- <h1 class="our-product-main"><a href="#"> Login to  </a></h1> --}}
-                        <div class="our-product-image">
-                            <img src="{{asset('img/login.png')}}" alt="image">
-                        </div>
-                    </div> <!-- /title-section -->
-                </div>
-                <div class="col-md-offset-2 col-lg-8">
+                
+                
+                    <div class="col-sm-12">
+                        <h2 class="text-center" style="text-align: center">Members Registration</h2>
+                    {{-- <h1 class="our-product-main"><a href="#"> Login to  </a></h1> --}}
+                    <div class="our-product-image">
+                        <a href="{{route('landing')}}"><img src="{{ asset('/') }}img/CT.png" alt="logo" style="width:100%;height:auto;"></a>
+                    </div>
+                    </div>
+                 <!-- /title-section -->
                     <!-- <form>
                         <input type="text"  class="mg-bottom-25 left" required="" placeholder="Name*" >
                         <input type="text"  class="mg-bottom-25 right" required="" placeholder="Email" >
@@ -63,77 +66,60 @@
                     </form>  -->
                     <form method="POST" action="{{ route('register') }}">
                             @csrf
-                            <h2 class="text-center">User Details</h2>
+                            <h4 class="text-center">User Details</h4>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" aria-label="First name" id="first" name="first" class="input-text @error('name') is-invalid @enderror" value="{{ old('first') }}" placeholder="First Name">
+                                    @error('first')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" aria-label="Last name" id="last" name="last"  class="input-text @error('name') is-invalid @enderror" value="{{ old('last') }}" placeholder="Last Name">
+                                    @error('last')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                            
+                            </div>
+                            <hr>
+                            <div class="row">
+
+                                <div class="col-sm-6">
+                                    <input placeholder="Birthday" type="text" id="birthday" name="birthday" class="input-text" >
+
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <input placeholder="contact number" type="tel" id="contact" name="contact" class="input-text" pattern="[0-9]{11}" value="{{ old('contact') }}" >
+                                </div>
+                            </div>
+
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <div class="input-group-prepend">
-                                            <span class="input-group-text md-addon col-form-label">Name: </span>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-6">
-                                                <input type="text" aria-label="First name" id="first" name="first" class="form-control @error('name') is-invalid @enderror" value="{{ old('first') }}" placeholder="First Name">
-                                                @error('first')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <input type="text" aria-label="Last name" id="last" name="last"  class="form-control @error('name') is-invalid @enderror" value="{{ old('last') }}" placeholder="Last Name">
-                                                @error('last')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                        </div>
+
+                                    <input id="email" type="email" class="input-text mt-1 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="your_email@email.com">
+
+                                        @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                 </div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col-sm-6">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text md-addon">Birthday: </span>
-                                    </div>
-                                    <input placeholder="Selected date" type="date" id="date-picker-example birthday" name="birthday" class="form-control" value="{{ old('birthday') }}" >
-
-                                </div>
-
-                                <div class="col-sm-6">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text md-addon">Contact no.: </span>
-                                    </div>
-                                    <input placeholder="09491234567" type="tel" id="contact" name="contact" class="form-control" pattern="[0-9]{11}" value="{{ old('contact') }}" >
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-6">
-
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text md-addon">{{ __('E-Mail Address') }} </span>
-                                        </div>
-                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="your_email@email.com">
-
-                                            @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-12">
 
 
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text md-addon">{{ __('Upline Referral code') }}: </span>
-                                        </div>
-                                        <input id="referral" type="text" class="form-control @error('referral_code') is-invalid @enderror" name="referral" required autocomplete="referral_code" placeholder="Referral Code" value="{{ request()->get('refcode') }}" readonly>
+                                    <input id="referral" type="text" class="input-text mt-1 @error('referral_code') is-invalid @enderror" name="referral" required autocomplete="referral_code" placeholder="Referral Code" value="{{ request()->get('refcode') }}" readonly>
 
-                                            @error('referral_code')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
+                                        @error('referral_code')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                 </div>
                             </div>
 
@@ -141,16 +127,13 @@
                             <hr>
 
 
-                            <h2 class="text-center">Account Details</h2>
+                            <h4 class="text-center">Account Details</h4>
 
 
                                 <div class="row">
                                         <div class="col-sm-6">
-                                            <div class="input-group-prepend">
-                                                    <span class="input-group-text md-addon">{{ __('Activation code') }}: </span>
-                                                </div>
-                                                {{-- <input id="activation" type="text" class="form-control @error('activation') is-invalid @enderror" name="activation" required autocomplete="activation" placeholder="Activation Code"> --}}
-                                                <input id="activation" type="text" class="form-control @error('activation') is-invalid @enderror" name="activation" required autocomplete="activation" placeholder="Activation Code">
+                                                {{-- <input id="activation" type="text" class="input-text @error('activation') is-invalid @enderror" name="activation" required autocomplete="activation" placeholder="Activation Code"> --}}
+                                                <input id="activation" type="text" class="input-text @error('activation') is-invalid @enderror" name="activation" required autocomplete="activation" placeholder="Activation Code">
                                                     @error('activation')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
@@ -158,10 +141,7 @@
                                                     @enderror
                                         </div>
                                         <div class="col-sm-6">
-                                            <div class="input-group-prepend">
-                                                    <span class="input-group-text md-addon">{{ __('Connection code') }}: </span>
-                                                </div>
-                                                <input id="connection_id" type="text" class="form-control @error('connection_id') is-invalid @enderror" name="connection_id" autocomplete="connection_id" placeholder="Connection ID" value="{{ request()->get('concode') }}" readonly>
+                                                <input id="connection_id" type="text" class="input-text @error('connection_id') is-invalid @enderror" name="connection_id" autocomplete="connection_id" placeholder="Connection ID" value="{{ request()->get('concode') }}" readonly>
                                                     @error('connection_id')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
@@ -170,11 +150,8 @@
                                         </div>
 
 
-                                            <div class="col-sm-12">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text md-addon">Username: </span>
-                                                </div>
-                                                <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" required autocomplete="username" placeholder="Username">
+                                            <div class="col-sm-12 mt-1">
+                                                <input id="username" type="text" class="input-text @error('username') is-invalid @enderror" name="username" required autocomplete="username" placeholder="Username">
 
                                                     @error('username')
                                                         <span class="invalid-feedback" role="alert">
@@ -184,12 +161,9 @@
                                             </div>
 
 
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-12 mt-1">
 
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text md-addon">{{ __('Password') }} </span>
-                                            </div>
-                                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
+                                            <input id="password" type="password" class="input-text @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
 
                                                 @error('password')
                                                     <span class="invalid-feedback" role="alert">
@@ -199,12 +173,9 @@
                                         </div>
 
 
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-12 mt-1">
 
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text md-addon">{{ __('Confirm Password') }} </span>
-                                            </div>
-                                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Password">
+                                            <input id="password-confirm" type="password" class="input-text" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
                                         </div>
                                 </div>
 
@@ -212,15 +183,15 @@
 
 
 
-                            <div class="form-group row mb-0">
+                            <div class="form-group row mt-2">
                                 <div class="col-sm-12">
-                                    <button type="submit" class="btn btn-primary form-control" id="register" style="width:100%;">
+                                    <button type="submit" class="btn btn-primary input-text" id="register" style="width:100%;color:#fff">
                                         {{ __('Register') }}
                                     </button>
                                 </div>
                             </div>
                         </form>
-                </div>
+               
             </div>
         </div>
     </section>
@@ -229,6 +200,8 @@
 
 
 @section('scripts')
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -238,6 +211,14 @@
                 });
             });
         });
+
+        $('input[name="birthday"]').daterangepicker({
+            singleDatePicker: true,
+            showDropdowns: true,
+        });
+
+        $('input[name="birthday"]').val('');
+        $('input[name="birthday"]').attr("placeholder","Birthday");
 
 
     </script>

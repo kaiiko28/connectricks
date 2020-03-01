@@ -151,12 +151,6 @@
             </ul>
         </div>
     </div>
-    <ul class="social-icons-simple revicon white">
-        <li class="d-table"><a href="javascript:void(0)" class="facebook"><i class="fab fa-facebook-f"></i></a> </li>
-        <li class="d-table"><a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter"></i> </a> </li>
-        <li class="d-table"><a href="javascript:void(0)" class="linkedin"><i class="fab fa-linkedin-in"></i> </a> </li>
-        <li class="d-table"><a href="javascript:void(0)" class="insta"><i class="fab fa-instagram"></i> </a> </li>
-    </ul>
 </section>
 <!--Main Slider ends -->
 <!--Some Services-->
@@ -167,25 +161,25 @@
                 <div class="item">
                     <div class="service-box">
                         <span class="bottom25"><i class="fa fa-clipboard"></i></span>
-                        <h4 class="bottom10 text-nowrap"><a href="javascript:void(0)">Well Documented</a></h4>
-                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet</p>
+                        <h4 class="bottom10 text-nowrap"><a href="javascript:void(0)">Easy To Comunicate</a></h4>
+                        <p>Product owner is easy to talk to. User can reach them in social media or by our page</p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="service-box">
                         <span class="bottom25"><i class="fa fa-laptop"></i></span>
-                        <h4 class="bottom10"><a href="javascript:void(0)">Fully Responsive</a></h4>
-                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet</p>
+                        <h4 class="bottom10"><a href="javascript:void(0)">Product Details</a></h4>
+                        <p>Aside from Facebook page, you can also see the description of the product before redirecting to purchase</p>
                     </div>
                 </div>
                 <div class="item">
                     <div class="service-box">
                         <span class="bottom25"><i class="fa fa-globe"></i></span>
                         <h4 class="bottom10"><a href="javascript:void(0)">Full Support</a></h4>
-                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet</p>
+                        <p>Members are very attentive to any question and would guide you in the process</p>
                     </div>
                 </div>
-                <div class="item">
+                {{-- <div class="item">
                     <div class="service-box">
                         <span class="bottom25"><i class="fa fa-edit"></i></span>
                         <h4 class="bottom10"><a href="javascript:void(0)">Clean Coded</a></h4>
@@ -198,7 +192,7 @@
                         <h4 class="bottom10"><a href="javascript:void(0)">SEO Optimized</a></h4>
                         <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet</p>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -210,10 +204,10 @@
         <div class="row d-flex align-items-center">
             <div class="col-lg-6 col-md-7 col-sm-7 text-sm-left text-center wow fadeInLeft" data-wow-delay="300ms">
                 <div class="heading-title mb-4">
-                    <h2 class="darkcolor font-normal bottom30">Lets take your <span class="defaultcolor">Business</span> to Next Level</h2>
+                    <h2 class="darkcolor font-normal bottom30">Lets take your <span class="defaultcolor">Earnings</span> to Next Level</h2>
                 </div>
-                <p class="bottom35">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris arcu, lobortis id interdum vitae, interdum eget elit. Curabitur quis urna nulla. Suspendisse potenti. Duis suscipit ultrices maximus. </p>
-                <a href="javascript:void(0)" class="button gradient-btn mb-sm-0 mb-4">Learn More</a>
+                <p class="bottom35">Connectrics has different ideas in earning online. Product, Invites, Bonuses, Referals and soon projects. Connectrics goal is to utilize every household need in the near future in a single device. For the meantime, Connectrics is focusing on its Clothing line. It also includes here the customization of every products.</p>
+                
             </div>
             <div class="col-lg-5 offset-lg-1 col-md-5 col-sm-5 wow fadeInRight" data-wow-delay="300ms">
                 <div class="image"><img alt="SEO" src="http://themesindustry.com/html/trax-2020/images/awesome-feature.png"></div>
@@ -228,8 +222,8 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 text-center">
                 <div class="heading-title whitecolor wow fadeInUp" data-wow-delay="300ms">
-                    <span>Quisque tellus risus, adipisci </span>
-                    <h2 class="font-normal">Our Work Process </h2>
+                    <span>Business is not just earning from you </span>
+                    <h2 class="font-normal">Ideas of Business</h2>
                 </div>
             </div>
         </div>
@@ -237,28 +231,28 @@
             <ul class="process-wrapp">
                 <li class="whitecolor wow fadeIn" data-wow-delay="300ms">
                     <span class="pro-step bottom20">01</span>
-                    <p class="fontbold bottom20">Concept</p>
-                    <p class="mt-n2 mt-sm-0">Quisque tellus risus, adipisci viverra bibendum urna.</p>
+                    <p class="fontbold bottom20">Clothings</p>
+                    <p class="mt-n2 mt-sm-0">Connectrics is a clothing store that accepting custom designs and also selling their own creation</p>
                 </li>
                 <li class="whitecolor wow fadeIn" data-wow-delay="400ms">
                     <span class="pro-step bottom20">02</span>
-                    <p class="fontbold bottom20">Plan</p>
-                    <p class="mt-n2 mt-sm-0">Quisque tellus risus, adipisci viverra bibendum urna.</p>
+                    <p class="fontbold bottom20">Shoes Idea</p>
+                    <p class="mt-n2 mt-sm-0">Aside from clothing connectrics also accepting shoe printing</p>
                 </li>
                 <li class="whitecolor wow fadeIn active" data-wow-delay="500ms">
                     <span class="pro-step bottom20">03</span>
-                    <p class="fontbold bottom20">Design</p>
-                    <p class="mt-n2 mt-sm-0">Quisque tellus risus, adipisci viverra bibendum urna.</p>
+                    <p class="fontbold bottom20">In site Earning</p>
+                    <p class="mt-n2 mt-sm-0">Connectrics System has its own earning dashboard where allow user to earn.</p>
                 </li>
                 <li class="whitecolor wow fadeIn" data-wow-delay="600ms">
                     <span class="pro-step bottom20">04</span>
-                    <p class="fontbold bottom20">Development</p>
-                    <p class="mt-n2 mt-sm-0">Quisque tellus risus, adipisci viverra bibendum urna.</p>
+                    <p class="fontbold bottom20">Invites</p>
+                    <p class="mt-n2 mt-sm-0">When you are a official member of connectrics your not stock in in site earning but also inviting friend could make you earn too.</p>
                 </li>
                 <li class="whitecolor wow fadeIn" data-wow-delay="700ms">
                     <span class="pro-step bottom20">05</span>
-                    <p class="fontbold bottom20">Quality Check</p>
-                    <p class="mt-n2 mt-sm-0">Quisque tellus risus, adipisci viverra bibendum urna.</p>
+                    <p class="fontbold bottom20">Be a Reseller</p>
+                    <p class="mt-n2 mt-sm-0">Why not focus on our product? being a reseller would give a great discount for every bundle purchase</p>
                 </li>
             </ul>
         </div>
@@ -271,12 +265,9 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-7 col-sm-12">
                 <div class="heading-title bottom30 wow fadeInUp" data-wow-delay="300ms">
-                    <span class="defaultcolor text-center text-md-left">Quisque tellus risus, adipisci viverra</span>
-                    <h2 class="darkcolor font-normal text-center text-md-left">Mobile App Designs</h2>
+                    <span class="defaultcolor text-center text-md-left">Connectrics Insite Earning</span>
+                    <h2 class="darkcolor font-normal text-center text-md-left">Mobile View Dashboard</h2>
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-5 col-sm-12">
-                <p class="text-center text-md-left">Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. </p>
             </div>
         </div>
         <div class="row d-flex align-items-center" id="app-feature">
@@ -286,9 +277,9 @@
                         <div class="icon"><i class="fas fa-cog"></i></div>
                         <div class="text">
                             <h3 class="bottom15">
-                                <span class="d-inline-block">Theme Options</span>
+                                <span class="d-inline-block">Earning Options</span>
                             </h3>
-                            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet</p>
+                            <p>Earn in different ways</p>
                         </div>
                     </div>
                     <div class="feature-item mt-5 wow fadeInLeft" data-wow-delay="350ms">
@@ -297,7 +288,7 @@
                             <h3 class="bottom15">
                                 <span class="d-inline-block">Customization</span>
                             </h3>
-                            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet</p>
+                            <p>Custom Request Capability</p>
                         </div>
                     </div>
                 </div>
@@ -306,17 +297,20 @@
                 <div class="app-image top30">
                     <div class="app-slider-lock-btn"></div>
                     <div class="app-slider-lock">
-                        <img src="http://themesindustry.com/html/trax-2020/images/iphone-slide-lock.jpg" alt="">
+                        <img src="{{asset('img/mobile/1.png')}}" alt="">
                     </div>
                     <div id="app-slider" class="owl-carousel owl-theme">
                         <div class="item">
-                            <img src="http://themesindustry.com/html/trax-2020/images/iphone-slide1.jpg" alt="">
+                            <img src="{{asset('img/mobile/2.png')}}" alt="">
                         </div>
                         <div class="item">
-                            <img src="http://themesindustry.com/html/trax-2020/images/iphone-slide2.jpg" alt="">
+                            <img src="{{asset('img/mobile/3.png')}}" alt="">
                         </div>
                         <div class="item">
-                            <img src="http://themesindustry.com/html/trax-2020/images/iphone-slide3.jpg" alt="">
+                            <img src="{{asset('img/mobile/4.png')}}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{{asset('img/mobile/5.png')}}" alt="">
                         </div>
                     </div>
                     <img src="http://themesindustry.com/html/trax-2020/images/iphone.png" alt="image">
@@ -325,21 +319,21 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="text-center text-md-left">
                     <div class="feature-item mt-3 wow fadeInRight" data-wow-delay="300ms">
-                        <div class="icon"><i class="fas fa-code"></i></div>
+                        <div class="icon"><i class="fas fa-wallet"></i></div>
                         <div class="text">
                             <h3  class="bottom15">
-                                <span class="d-inline-block">Powerful Code</span>
+                                <span class="d-inline-block">Powerful Wallet</span>
                             </h3>
-                            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet</p>
+                            <p>Encashment support by gcash</p>
                         </div>
                     </div>
                     <div class="feature-item mt-5 wow fadeInRight" data-wow-delay="350ms">
                         <div class="icon"><i class="far fa-folder-open"></i></div>
                         <div class="text">
                             <h3  class="bottom15">
-                                <span class="d-inline-block">Documentation </span>
+                                <span class="d-inline-block">Accessible </span>
                             </h3>
-                            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet</p>
+                            <p>Easy access any time anywhere</p>
                         </div>
                     </div>
                 </div>
@@ -475,14 +469,21 @@
                 </div>
             </div>
             <div class="col-lg-12">
+                
                 <div id="mosaic-filter" class="cbp-l-filters bottom30 wow fadeIn text-center" data-wow-delay="350ms">
+                    
                     <div data-filter="*" class="cbp-filter-item">
                         <span>All</span>
                     </div>
-                    <div data-filter=".digital" class="cbp-filter-item">
-                        <span>Digital</span>
-                    </div>
-                    <div data-filter=".design" class="cbp-filter-item">
+                    @foreach ($category as $item)
+                        {{-- <p>{{ $item->category}}</p> --}}
+
+                        <div data-filter=".{{ $item->category}}" class="cbp-filter-item">
+                            <span>{{ $item->category}}</span>
+                        </div>
+                    @endforeach
+                    
+                    {{-- <div data-filter=".design" class="cbp-filter-item">
                         <span>Design</span>
                     </div>
                     <div data-filter=".brand" class="cbp-filter-item">
@@ -490,23 +491,27 @@
                     </div>
                     <div data-filter=".graphics" class="cbp-filter-item">
                         <span>Graphics</span>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-lg-12">
                 <div id="grid-mosaic" class="cbp cbp-l-grid-mosaic-flat">
                     <!--Item 1-->
-                    <div class="cbp-item brand graphics">
-                        <img src="http://themesindustry.com/html/trax-2020/images/gallery-5.jpg" alt="">
-                        <div class="gallery-hvr whitecolor">
-                            <div class="center-box">
-                                <a href="http://themesindustry.com/html/trax-2020/images/gallery-5.jpg" class="opens" data-fancybox="gallery" title="Zoom In"> <i class="fa fa-search-plus"></i></a>
-                                <a href="javascript:void(0)" class="opens" title="View Details"> <i class="fas fa-link"></i></a>
-                                <h4 class="w-100">Sweet Cup</h4>
+                    @foreach ($product as $products)
+
+                        <div class="cbp-item brand {{$products->category}}">
+                            <img src="{{$products->cover_image}}" alt="">
+                            <div class="gallery-hvr whitecolor">
+                                <div class="center-box">
+                                    <a href="{{$products->cover_image}}" class="opens" data-fancybox="gallery" title="Zoom In"> <i class="fa fa-search-plus"></i></a>
+                                    <a href="{{route('shop.single') . '?id=' . $products->id}}" class="opens" title="View Details"> <i class="fas fa-link"></i></a>
+                                    <h4 class="w-100">Sweet Cup</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!--Item 2-->
+                    @endforeach
+                    
+                    {{-- <!--Item 2-->
                     <div class="cbp-item brand graphics design">
                         <img src="http://themesindustry.com/html/trax-2020/images/gallery-7.jpg" alt="">
                         <div class="gallery-hvr whitecolor">
@@ -560,17 +565,11 @@
                                 <h4 class="w-100">Great Objects</h4>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 text-center mt-5">
                     <!--Load more itema from another html file using ajax-->
-                    <div id="js-loadMore-mosaic" class="cbp-l-loadMore-button ">
-                        <a href="http://themesindustry.com/html/trax-2020/load-more.html" class="cbp-l-loadMore-link border-0 font-13 button gradient-btn whitecolor transition-3" rel="nofollow">
-                            <span class="cbp-l-loadMore-defaultText">Load More (<span class="cbp-l-loadMore-loadItems">6</span>)</span>
-                            <span class="cbp-l-loadMore-loadingText">Loading <i class="fas fa-spinner fa-spin"></i></span>
-                            <span class="cbp-l-loadMore-noMoreLoading d-none">NO MORE WORKS</span>
-                        </a>
-                    </div>
+                    <a class="btn btn-info" href="{{route('shop')}}">View More</a>
                 </div>
             </div>
         </div>
@@ -685,23 +684,17 @@
                 <div class="col-md-6 col-sm-12 order-md-2 text-center text-md-left">
                     <div class="contact-meta pl-0 pl-sm-5 wow fadeInRight" data-wow-delay="300ms">
                         <div class="heading-title heading_small">
-                            <span class="defaultcolor mb-2">Trax Agency Worldwide</span>
-                            <h3 class="darkcolor font-normal">Our London Agency</h3>
+                            {{-- <span class="defaultcolor mb-2">Connectrics Office</span> --}}
+                            <h3 class="darkcolor font-normal">Our Valenzuela Office</h3>
                         </div>
                         <div class="my-3">
-                            <p class="bottom10">Address: 309, New Cavendish St, EC1Y 3WK</p>
-                            <p class="bottom10">0800 214 5252</p>
-                            <p class="bottom10">0400 20778972</p>
-                            <p class="bottom10"><a href="mailto:polpo@traxagency.co.au">polpo@traxagency.com</a></p>
+                            <p class="bottom10">Address: Malinta Exit, Valenzuela City</p>
+                            <p class="bottom10">09123456789</p>
+                            <p class="bottom10">09987654321</p>
                             <p class="bottom10">Mon-Fri: 9am-5pm</p>
                         </div>
                         <ul class="social-icons no-border mb-4 mb-md-0 wow fadeInUp" data-wow-delay="300ms">
                             <li><a href="javascript:void(0)" class="facebook"><i class="fab fa-facebook-f"></i> </a> </li>
-                            <li><a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter"></i> </a> </li>
-                            <li><a href="javascript:void(0)" class="linkedin"><i class="fab fa-linkedin-in"></i> </a> </li>
-                            <li><a href="javascript:void(0)" class="insta"><i class="fab fa-instagram"></i> </a> </li>
-                            <li><a href="javascript:void(0)" class="whatsapp"><i class="fab fa-whatsapp"></i> </a> </li>
-                            <li><a href="javascript:void(0)"><i class="far fa-envelope"></i> </a> </li>
                         </ul>
                     </div>
                 </div>
@@ -740,52 +733,4 @@
     </div>
 </section>
 <!--contact us end-->
-<!-- map -->
-<div class="w-100">
-    <div id="map" class="full-map"></div>
-</div>
-<!-- map end -->
-<!-- Stay connected US -->
-<section id="stayconnect">
-    <div class="container position-relative">
-        <div class="contactus-wrapp position-absolute shadow-equal">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="heading-title wow fadeInUp text-center text-md-left" data-wow-delay="300ms">
-                        <h3 class="darkcolor bottom20">Stay Connected</h3>
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12">
-                    <form class="getin_form wow fadeInUp" data-wow-delay="400ms" onsubmit="return false;">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12" id="result"></div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="form-group">
-                                    <label for="userName" class="d-none"></label>
-                                    <input class="form-control" type="text" placeholder="Name" required id="userName" name="userName">
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="form-group">
-                                    <label for="companyName" class="d-none"></label>
-                                    <input class="form-control" type="text" placeholder="Company"  id="companyName" name="companyName">
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="form-group">
-                                    <label for="email" class="d-none"></label>
-                                    <input class="form-control" type="email" placeholder="Email" required id="email" name="email">
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <button type="submit" class="button gradient-btn w-100" id="submit_btn">subscribe</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Contact US ends -->
 @endsection

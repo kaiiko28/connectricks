@@ -14,7 +14,7 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', 'LandingController@index');
+Route::get('/', 'LandingController@index')->name('landing');
 
 Auth::routes();
 
@@ -80,9 +80,6 @@ Route::prefix('/user')->group(function() {
     // });
 
 
-    Route::prefix('/shop')->group(function() {
-        Route::get('/', 'ShopController@index')->name('shop');
-    });
 
 });
 
@@ -130,6 +127,10 @@ Route::prefix('/master')->group(function() {
 Route::post('/update_code', 'Auth/RegisterController@update_code')->name('user.update_code');
 
 
+Route::prefix('/shop')->group(function() {
+    Route::get('/', 'ShopController@index')->name('shop');
+    Route::get('/item', 'ShopController@view_product')->name('shop.single');
+});
 // Route::prefix('/testing')->group(function() {
 
 // 	Auth::routes();

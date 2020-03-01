@@ -215,7 +215,7 @@
 <body data-spy="scroll" data-target=".navbar-nav" data-offset="75" class="offset-nav">
 <!--PreLoader-->
 <div class="loader text-center">
-    <img src="{{ asset('/') }}img/loading.gif" alt="" style="margin-top:5%">
+    <img src="{{ asset('/') }}img/loading.gif" alt="" style="margin-top:5%;width:50%" >
 </div>
 <!--PreLoader Ends-->
 <!-- header -->

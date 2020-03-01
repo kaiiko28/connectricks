@@ -25,16 +25,17 @@ class RequestController extends Controller
 
     public function view(Request $request)
     {
-        $this->validate($request,[
-            'id' => 'required',
-        ]);
+        return '123';
+        // $this->validate($request,[
+        //     'id' => 'required',
+        // ]);
 
-        $id = $request->id;
-        $mypayouts = DB::table('requestpayouts')->where('id', $id)->first();
-        $user_id = auth()->user()->id;
-        $user = User::find($user_id);
+        // $id = $request->id;
+        // $mypayouts = DB::table('requestpayouts')->where('id', $id)->first();
+        // $user_id = auth()->user()->id;
+        // $user = User::find($user_id);
 
-        return view('dashboard.view_payout',compact('mypayouts'))->with('UserCaptcha', $user->UserCaptcha);
+        // return view('dashboard.view_payout',compact('mypayouts'))->with('UserCaptcha', $user->UserCaptcha);
     }
 
     /**
@@ -45,12 +46,13 @@ class RequestController extends Controller
     public function create(Request $request)
     {
         // return "1234";
-        // $this->validate($request,[
-        //     'encashments' => 'required',
-        //     'user_id' => 'required',
-        //     'user_code' => 'required',
-        //     'username' => 'required',
-        // ]);
+        $this->validate($request,[
+            'encashments' => 'required',
+            'user_id' => 'required',
+            'user_code' => 'required',
+            'username' => 'required',
+            'source' => 'required',
+        ]);
 
         $acc_status = accode::where('activation_code',Auth()->user()->code)->orderBy('id','desc')->get('notice');
         $wallet = wallet::where('user_id',Auth()->user()->id)->first();
@@ -58,10 +60,11 @@ class RequestController extends Controller
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
         $limit = $request->input('encashments');
+        $source = $request->input('source');
         $request = DB::table('requestpayouts')->where('user_id', Auth()->user()->id)->where('status', 'Pending')->get();
 
         $UserCaptcha = UserCaptcha::where('user_id', auth()->user()->id)->first();
-        $source = $request->input('source');
+        
 
         if($source == 'captcha earnings') {
             if ($limit < 200)

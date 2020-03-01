@@ -132,13 +132,13 @@ class DashboardController extends Controller
 
         $now = date('Y-m-d h:i:s',strtotime("+8 hours"));
 
-        $totalcaptcha = 60000;
+        $totalcaptcha = 75000;
 
 
         // echo $now;
         $id = $request->user_id;
         $user = UserCaptcha::where('user_id',  $id)->first();
-        $captchasolve = $user->Earnings / 0.025;
+        $captchasolve = $user->Earnings / 0.02;
 
         $remainingcaptcha = $totalcaptcha - $captchasolve;
 

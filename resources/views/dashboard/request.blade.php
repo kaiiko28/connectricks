@@ -499,7 +499,7 @@
     });
 </script>
 
-@if (request()->get('source') == "Captcha Earnings" || request()->get('source') == "Table of Exit Earnings" || request()->get('source') == "Invite")
+@if (request()->get('source') == "captcha earnings" || request()->get('source') == "Invite")
     <script>
         jQuery(function($) {
             $('#encashment').text($('#request').val());

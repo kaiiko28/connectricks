@@ -86,8 +86,8 @@ class LoginController extends Controller
 
             return redirect($this->redirectTo)->with('success', 'Welcome Back!');
         }
-        \Session::put('alert', 'Your username or password wrong!!');
-        return back();
+        // \Session::put('alert', 'Your username or password wrong!!');
+        return redirect()->back()->with('error', 'Your username or password wrong!!');
 
     }
 
