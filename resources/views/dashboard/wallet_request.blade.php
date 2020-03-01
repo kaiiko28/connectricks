@@ -452,7 +452,7 @@
                                         <div class="col-sm-12">
                                             <div class="checkbox-custom chekbox-info">
 
-                                                <h3 class="bg-danger text-justify" style="padding:10px;">Note: Please double check the details before confirming the button. Emerald Green is not responsible for any mistake data that are stated above,
+                                                <h3 class="bg-danger text-justify" style="padding:10px;">Note: Please double check the details before confirming the button. Connectricks is not responsible for any mistake data that are stated above,
                                                     Thank you</h3> <br><br>
                                                 <input id="confirm1" value="I had confirm that all details stated above is correct." type="checkbox" name="confirm" required="">
                                                 <label for="confirm1"><h3>Yes I understand</h3></label> <br>

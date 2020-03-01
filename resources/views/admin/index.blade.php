@@ -18,7 +18,7 @@
                     $total = DB::table('requestpayouts')->sum('engcashment');
                 @endphp
                 <div class="card-header">
-                    <h2>Hi, This is the emerald's Statistic </h2>
+                    <h2>Hi, This is the Connectricks's Statistic </h2>
                 </div>
                 <div class="card-body">
                     <div class="col-sm-12">

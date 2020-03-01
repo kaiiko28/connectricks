@@ -64,9 +64,9 @@ $new = date("F d, Y", strtotime($request_date));
 
                                     <div class="invoice-address">
                                             <h4>From</h4>
-                                            <h6>EMERALD GREEN</h6>
-                                            <p>Valenzuela City 1444</p>
-                                            <p><a href="tel:+639562695368" style="color:#fff;">0956 269 5368</a></p>
+                                            <h6>Connectricks</h6>
+                                            <p>Valenzuela City</p>
+                                            {{-- <p><a href="tel:+639562695368" style="color:#fff;">0956 269 5368</a></p> --}}
                                             <p></p>
                                         </div>
 

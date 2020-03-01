@@ -16,7 +16,7 @@
         <!-- Basic Page Needs -->
       <meta charset="utf-8">
       <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-      <title>{{ config('app.name', 'Emerald Green Online Shop') }}</title>
+      <title>{{ config('app.name', 'Connectricks') }}</title>
 
       <meta name="author" content="Anna Liza Bade Dela Cruz">
 
@@ -153,7 +153,7 @@
                 
                 
                 <div class="widget widget-text">
-                    <span>© 2019 Emerald Green. All Rights Reserved</span>
+                    <span>© 2019 Connectricks. All Rights Reserved</span>
                 </div>
             </div> <!-- /footer-widgets -->
         </div> <!-- /container -->
@@ -316,7 +316,7 @@
                     <li><a href="javascript:void(0)" class="twitter"><i class="fab fa-twitter"></i> </a> </li>
                     <li><a href="javascript:void(0)" class="insta"><i class="fab fa-instagram"></i> </a> </li>
                 </ul>
-                <p class="whitecolor">&copy; <span id="year"></span> {{ config('app.name', 'Emerald Green Online Shop') }}</p>
+                <p class="whitecolor">&copy; <span id="year"></span> {{ config('app.name', 'Connectricks Online Shop') }}</p>
             </div>
         </div>
     </div>

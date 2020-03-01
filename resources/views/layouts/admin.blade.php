@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Happy Emerald') }}</title>
+    <title>{{ config('app.name', 'Connectricks') }}</title>
 
 
     <!-- Fonts -->
@@ -89,7 +89,7 @@
         <!--Navbar -->
         <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color navbar-fixed-top ">
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Happy Emerald') }}
+                {{ config('app.name', 'Connectricks') }}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
             aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">

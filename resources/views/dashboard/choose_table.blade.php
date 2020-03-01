@@ -93,7 +93,7 @@
                                         @elseif($user->current_table == 'Table 6')
                                             <div class="text-center">
                                                 <h1>Congratulation!</h1>
-                                                <h3>You've finish the table of exits! Thank you for trusting Emerald Green.</h3>
+                                                <h3>You've finish the table of exits! Thank you for trusting Connectricks.</h3>
                                             </div>
                                         @else
                                             <h3>Please ask {{$upline->firstname}} {{$upline->lastname}}</h3>

@@ -104,7 +104,7 @@ $new = date("F d, Y", strtotime($request_date));
 
                                 <div class="invoice-address">
                                     <h5>From</h5>
-                                    <h6>EMERALD GREEN ONLINE SHOP</h6>
+                                    <h6>Connectricks</h6>
                                     <p></p>
                                     <p></p>
                                     <p></p>
